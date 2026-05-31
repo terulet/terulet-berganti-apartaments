@@ -309,3 +309,54 @@ footer p{font-weight:300;font-size:.92rem;line-height:1.85}
 /* Licencias HUTG en footer */
 .hutg{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;margin-top:8px;
   font-size:.78rem;font-weight:300;opacity:.6;line-height:1.6}
+
+
+/* ===== MEGA WEB FLAMA · mejoras de conversión ===== */
+nav{top:0}
+.practical{padding:110px 0;background:#fff}
+.practical-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.practical-copy p{color:#5a6a70;font-weight:300;font-size:1.08rem;margin-top:22px}
+.practical-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mini-benefit{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px 26px;box-shadow:var(--shadow-sm)}
+.mini-benefit span{font-family:var(--serif);color:var(--gold);letter-spacing:.14em;font-size:.9rem}
+.mini-benefit h3{font-size:1.35rem;margin:14px 0 10px}
+.mini-benefit p{color:#5a6a70;font-weight:300;font-size:.95rem}
+.apt-table-block{padding:80px 0 0}
+.apt-table-block .lead{max-width:58ch;margin:18px auto 42px;color:#5a6a70;font-weight:300}
+.apt-grid-all{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.apt-mini{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);transition:.35s}
+.apt-mini:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.apt-mini img{height:180px}
+.apt-mini>div{padding:22px}
+.apt-number{display:inline-block;color:var(--terracotta);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;font-weight:600;margin-bottom:8px}
+.apt-mini h3{font-size:1.25rem;margin-bottom:6px}
+.apt-mini p{color:#5a6a70;font-weight:300;font-size:.9rem;margin-bottom:14px}
+.apt-mini ul{display:grid;gap:6px;margin-bottom:16px}
+.apt-mini li{font-size:.9rem;color:var(--sea-deep)}
+.mini-link{color:var(--sea);font-weight:600;font-size:.9rem}
+.pack-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:50px 0 38px}
+.pack-cards article{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:28px;color:#fff}
+.pack-cards span{font-size:2rem}
+.pack-cards h3{font-size:1.3rem;margin:12px 0 10px;color:#fff}
+.pack-cards p{opacity:.84;font-weight:300;font-size:.94rem;margin-bottom:16px}
+.pack-cards b{color:var(--sand);font-weight:600}
+.precompra-whatsapp{text-align:center}
+.precompra-whatsapp p{margin-top:14px;opacity:.72;font-size:.9rem}
+.confidence{padding:115px 0;background:#fff}
+.faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.faq-grid article{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow-sm)}
+.faq-grid h3{font-size:1.28rem;margin-bottom:10px}
+.faq-grid p{color:#5a6a70;font-weight:300}
+@media(max-width:980px){
+  .practical-grid{grid-template-columns:1fr}
+  .practical-cards,.apt-grid-all,.faq-grid{grid-template-columns:1fr 1fr}
+  .pack-cards{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .practical{padding:78px 0}
+  .practical-cards,.apt-grid-all,.pack-cards,.faq-grid{grid-template-columns:1fr}
+  .apt-mini img{height:210px}
+  .hero-inner h1{font-size:clamp(2.25rem,12vw,4rem)}
+  .hero-sub{font-size:1.02rem}
+  .trustbar-title{font-size:1rem}
+}

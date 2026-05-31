@@ -114,7 +114,7 @@
       var detalle = document.getElementById('detalle').value.trim();
 
       if (!nombre || !email) {
-        if (msg) { msg.style.color = '#f0c0a0'; msg.textContent = (I18N[currentLang]&&I18N[currentLang]['pre.err'])||'Por favor, indícanos al menos tu nombre y email.'; }
+        if (msg) { msg.style.color = '#f0c0a0'; msg.textContent = (typeof I18N!=='undefined' && I18N[currentLang]&&I18N[currentLang]['pre.err'])||'Por favor, indícanos al menos tu nombre y email.'; }
         return;
       }
 
@@ -133,7 +133,7 @@
 
       if (msg) {
         msg.style.color = '';
-        var okMsg=(I18N[currentLang]&&I18N[currentLang]['pre.ok'])||'Gracias, {name}. Hemos recibido tu solicitud y te contactaremos para confirmar los detalles.';
+        var okMsg=(typeof I18N!=='undefined' && I18N[currentLang]&&I18N[currentLang]['pre.ok'])||'Gracias, {name}. Hemos recibido tu solicitud y te contactaremos para confirmar los detalles.';
         msg.textContent = okMsg.replace('{name}', nombre);
       }
       form.reset();
