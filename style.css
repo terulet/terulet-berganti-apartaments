@@ -231,3 +231,81 @@ footer p{font-weight:300;font-size:.92rem;line-height:1.85}
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ============================================================
+   OPTIMIZACIÓN CRO · El Bergantí (añadido FLAMA)
+   ============================================================ */
+
+/* Franja de confianza bajo el hero */
+.trustbar{background:var(--sea-deep);color:#fff;padding:30px 0}
+.trustbar-title{text-align:center;font-family:var(--serif);font-size:1.15rem;letter-spacing:.01em;color:var(--sand);margin-bottom:20px}
+.trust-items{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  padding:12px 20px;border-radius:40px;font-size:.92rem;font-weight:400}
+.trust-item span{font-size:1.25rem;line-height:1}
+
+/* Experiencia a 2 columnas */
+.exp-grid.exp-2{grid-template-columns:1fr 1fr;max-width:920px;margin:0 auto}
+
+/* Specs en apartamentos destacados */
+.specs{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+.specs li{display:flex;align-items:center;gap:9px;font-size:.95rem;color:var(--sea-deep);font-weight:400}
+.specs li span{font-size:1.1rem;line-height:1}
+.specs li b{font-weight:500}
+
+/* Specs compactas en tarjetas */
+.card-specs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.card-specs span{font-size:.82rem;color:var(--sea-deep);background:var(--sand-soft);padding:4px 10px;border-radius:20px;font-weight:500}
+
+/* Reseñas */
+.reviews{padding:120px 0;background:linear-gradient(160deg,#fff,var(--sand-soft))}
+.reviews h2{margin-bottom:14px}
+.reviews-demo{color:#a06a2e;font-size:.86rem;font-weight:400;margin-bottom:46px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.review{background:#fff;border-radius:16px;padding:32px 30px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:14px}
+.review .stars{color:var(--gold);font-size:1.1rem;letter-spacing:2px}
+.review blockquote{font-family:var(--serif);font-size:1.18rem;line-height:1.45;color:var(--ink);font-style:italic}
+.review figcaption{font-size:.92rem;color:#5a6a70;margin-top:auto}
+.review figcaption b{color:var(--sea-deep);font-weight:600}
+
+/* Reserva: lead */
+.reserva .lead{max-width:60ch;margin:0 auto 38px;color:#4a5a60;font-weight:300;font-size:1.1rem}
+
+/* Barra fija móvil (oculta en escritorio) */
+.mobile-bar{display:none}
+@media(max-width:760px){
+  .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:65;gap:10px;padding:12px 14px;
+    background:rgba(251,248,241,.96);backdrop-filter:blur(12px);box-shadow:0 -4px 24px -10px rgba(18,55,67,.4)}
+  .mobile-bar a{flex:1;text-align:center;padding:14px;border-radius:40px;font-weight:600;font-size:.95rem}
+  .mb-ghost{background:#fff;border:1.5px solid var(--sea);color:var(--sea-deep)}
+  .mb-wa{background:#25d366;color:#fff}
+  .wa-float{display:none}            /* evitar duplicar WhatsApp en móvil */
+  body{padding-bottom:72px}          /* hueco para que la barra no tape el footer */
+  .trust-items{flex-direction:column;align-items:stretch;gap:10px}
+  .trust-item{justify-content:center}
+  .exp-grid.exp-2{grid-template-columns:1fr}
+  .specs{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+}
+
+/* Selector de idioma: separación clara (evita "ESCAFRENDENL" pegado) */
+.lang{gap:0}
+.lang a{position:relative;padding:2px 8px}
+.lang a:not(:last-child)::after{content:"";position:absolute;right:0;top:50%;transform:translateY(-50%);
+  width:1px;height:11px;background:currentColor;opacity:.35}
+
+/* Badge de valoración Booking (verificable) */
+.booking-badge{display:inline-flex;align-items:center;gap:16px;margin:0 auto 36px;padding:16px 26px;
+  background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-sm);
+  text-decoration:none;transition:.4s cubic-bezier(.16,1,.3,1)}
+.booking-badge:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.booking-badge .bb-score{background:var(--sea-deep);color:#fff;font-family:var(--serif);font-size:1.6rem;
+  padding:10px 16px;border-radius:12px;line-height:1}
+.booking-badge .bb-text{display:flex;flex-direction:column;gap:3px;text-align:left}
+.booking-badge .bb-text b{color:var(--ink);font-weight:600;font-size:1rem}
+.booking-badge .bb-text small{color:#5a6a70;font-size:.84rem}
+.reviews .booking-badge{display:flex;width:fit-content}
+
+/* Licencias HUTG en footer */
+.hutg{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;margin-top:8px;
+  font-size:.78rem;font-weight:300;opacity:.6;line-height:1.6}
